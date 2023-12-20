@@ -37,11 +37,8 @@ const TestComponent = () => {
 
 	const generateHeaders = (): ReactNode[] => {
 		const res = [];
-		if (filteredData.length > 0) {
-			// check that filteredData is not undefined
-			for (const key of Object.keys(filteredData[0])) {
-				res.push(<th key={key}>{key}</th>);
-			}
+		for (const key of Object.keys(data[0])) {
+			res.push(<th key={key}>{key}</th>);
 		}
 		return res;
 	};

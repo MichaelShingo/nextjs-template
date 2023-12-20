@@ -38,17 +38,17 @@ const TestComponent = () => {
 	const generateHeaders = (): ReactNode[] => {
 		const res = [];
 		for (const key of Object.keys(filteredData[0])) {
-			res.push(<th key={key}>{key}</th>);
+			res.push(<th>{key}</th>);
 		}
 		return res;
 	};
 
 	const generateRows = (): ReactNode[] => {
 		const res = [];
-		if (filteredData.length > 0) {
+		if (filteredData) {
 			for (const item of filteredData) {
 				res.push(
-					<tr key={item.id}>
+					<tr>
 						<td>{item.id}</td>
 						<td>{item.name}</td>
 						<td>{item.size}</td>
