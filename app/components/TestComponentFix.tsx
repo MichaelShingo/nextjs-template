@@ -20,7 +20,7 @@ const boatData: BoatData[] = [
 	{ id: 10, name: 'boat10', size: 'L' },
 ];
 
-const TestComponent = () => {
+const TestComponentFix = () => {
 	const [search, setSearch] = useState<string>('');
 	const [data, setData] = useState<BoatData[]>(boatData);
 	const [filteredData, setFilteredData] = useState<BoatData[]>(boatData);
@@ -76,4 +76,4 @@ const TestComponent = () => {
 	);
 };
 
-export default TestComponent;
+export default TestComponentFix;
