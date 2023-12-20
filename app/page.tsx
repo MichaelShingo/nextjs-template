@@ -1,5 +1,5 @@
-import TestComponent from './components/TestComponent';
+import TestComponentFix from './components/TestComponentFix';
 
 export default function Home() {
-	return <TestComponent />;
+	return <TestComponentFix />;
 }

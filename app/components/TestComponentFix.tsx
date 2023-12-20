@@ -37,15 +37,18 @@ const TestComponent = () => {
 
 	const generateHeaders = (): ReactNode[] => {
 		const res = [];
-		for (const key of Object.keys(filteredData[0])) {
-			res.push(<th key={key}>{key}</th>);
+		if (filteredData.length > 0) {
+			// check that filteredData is not undefined
+			for (const key of Object.keys(filteredData[0])) {
+				res.push(<th key={key}>{key}</th>);
+			}
 		}
 		return res;
 	};
 
 	const generateRows = (): ReactNode[] => {
 		const res = [];
-		if (filteredData.length > 0) {
+		if (filteredData) {
 			for (const item of filteredData) {
 				res.push(
 					<tr key={item.id}>
